@@ -1,0 +1,28 @@
+CREATE DATABASE hoteldb;
+use hoteldb;
+
+CREATE TABLE roomtbl (
+    RNum INT(11) NOT NULL PRIMARY KEY,
+    RName VARCHAR(50),
+    RType VARCHAR(30),
+    RStatus VARCHAR(20),
+    Price INT(11)
+);
+CREATE TABLE BookingTbl (
+    BNum INT(11) NOT NULL PRIMARY KEY,
+    Room INT(11),
+    Customer INT(11),
+    BDate VARCHAR(50),
+    Duration INT(11),
+    Cost INT(11)
+);
+CREATE TABLE customer (
+    CustNum INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    CustName VARCHAR(50),
+    CustPhone VARCHAR(50),
+    CustGen VARCHAR(10),
+    CustAdd VARCHAR(50),
+    CustDob VARCHAR(50)
+);
+
+
